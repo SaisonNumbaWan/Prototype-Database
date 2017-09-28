@@ -288,11 +288,13 @@ public class LoginActivity extends AppCompatActivity implements
         }
     }
 
+    /*
     public void sendMessage(View v)
     {
         Intent i = new Intent(this, MainPage.class);
-        EditText  editText = (EditText) findViewById(R.id.UserName);
+        EditText  editText = (EditText) findViewById(R.id.userName);
         String message = editText.getText().toString();
         startActivity(i);
     }
+    */
 }
