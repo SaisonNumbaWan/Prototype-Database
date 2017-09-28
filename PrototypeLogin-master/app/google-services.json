@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "622836979785",
+    "firebase_url": "https://prototypelogin-1a0ae.firebaseio.com",
+    "project_id": "prototypelogin-1a0ae",
+    "storage_bucket": "prototypelogin-1a0ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622836979785:android:3717fcd4ad056e8f",
+        "android_client_info": {
+          "package_name": "amanah.com.loginbeutifull"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622836979785-fll0bidjr9nhb4lbvim1n52mdb4rvcce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "amanah.com.loginbeutifull",
+            "certificate_hash": "c0a127e78b6e19e6e88ac497e25299f1bb9d9be7"
+          }
+        },
+        {
+          "client_id": "622836979785-5aor37j0v02t305d1ij1jg8csh88mgvt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "amanah.com.loginbeutifull",
+            "certificate_hash": "5fe39669c1e8175f871b16f79af67a7549660f06"
+          }
+        },
+        {
+          "client_id": "622836979785-1e4d6b3r319pi8pku7lim50qcrvammqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvRsBXkCMwG_Ud0ucODZC4KmLri190M8Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622836979785-1e4d6b3r319pi8pku7lim50qcrvammqo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
