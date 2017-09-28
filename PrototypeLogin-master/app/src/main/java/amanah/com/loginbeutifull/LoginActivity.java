@@ -93,6 +93,7 @@ public class LoginActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        DatabaseHelper db = new DatabaseHelper(this);
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);

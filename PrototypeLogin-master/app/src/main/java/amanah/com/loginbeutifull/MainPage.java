@@ -1,5 +1,6 @@
 package amanah.com.loginbeutifull;
 
+import android.content.ContentValues;
 import android.os.Bundle;
 
 /**
@@ -15,10 +16,7 @@ public class MainPage extends LoginActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_page);
-        DatabaseHelper dbh = DatabaseHelper.getInstance(this);
         db = new DatabaseHelper(this);
-        db.getWritableDatabase();
-        db.getReadableDatabase();
-
+        db.insertPerson("Goodmang","me","you","adad");
     }
 }

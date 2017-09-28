@@ -1,5 +1,6 @@
 package amanah.com.loginbeutifull;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -21,12 +22,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_5 = "LASTNAME";
 
     private static DatabaseHelper instance;
+    private static SQLiteDatabase db;
 
 
     public DatabaseHelper(Context context)
     {
         super(context, DB_NAME, null, 1);
-        SQLiteDatabase db = this.getWritableDatabase();
+        db = this.getWritableDatabase();
     }
 
     public static synchronized DatabaseHelper getInstance(final Context c)
@@ -39,13 +41,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void onCreate(final SQLiteDatabase db)
     {
+        db.execSQL("CREATE TABLE" + TABLE_NAME1 + "(" +
+            COL_1 + " INTEGER PRIMARY KEY, " +
+            COL_2 + " TEXT, " +
+            COL_3 + " TEXT, " +
+            COL_4 + " TEXT, " +
+            COL_5 + " TEXT)");
 
-        db.execSQL("CREATE TABLE "+TABLE_NAME1+" (ID INTEGER PRIMARY KEY AUTOINCREMENT, EMAIL TEXT, USERNAME TEXT, FIRSTNAME TEXT, LASTNAME TEXT)");
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME1);
         onCreate(db);
+    }
+    public boolean insertPerson(String email, String username, String firstname, String lastname)
+    {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues cV = new ContentValues();
+        cV.put(COL_2,email);
+        cV.put(COL_3,username);
+        cV.put(COL_4, firstname);
+        cV.put(COL_5, lastname);
+        db.insert("Users", null, cV);
+        return true;
     }
 }
